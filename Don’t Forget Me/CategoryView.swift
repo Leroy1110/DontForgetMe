@@ -6,6 +6,8 @@ struct CategoryView: View {
     @State private var newItem = ""
     @State private var showAlert = false
     @State private var uncheckedItems: [String] = []
+    
+    // Reminder picker state
     @State private var selectedTime: Date = Date()
     @State private var showCategoryTimePicker = false
 
@@ -22,16 +24,18 @@ struct CategoryView: View {
                         manager.removeItem(from: category, at: offsets)
                     }
                 }
+                // Per‑category reminder button
                 Button(action: {
                     showCategoryTimePicker.toggle()
                 }) {
-                    Label("שנה שעת תזכורת לקטגוריה", systemImage: "clock")
+                    Label("Change Category Reminder Time", systemImage: "clock")
                 }
                 
                 .padding()
-
+                
+                // Per‑category reminder picker
                 if showCategoryTimePicker {
-                    DatePicker("בחר שעה", selection: $selectedTime, displayedComponents: .hourAndMinute)
+                    DatePicker("Select Time", selection: $selectedTime, displayedComponents: .hourAndMinute)
                         .datePickerStyle(WheelDatePickerStyle())
                         .labelsHidden()
                         .onChange(of: selectedTime) { newValue in
@@ -44,17 +48,18 @@ struct CategoryView: View {
                                     at: manager.categories[index].notificationHour,
                                     minute: manager.categories[index].notificationMinute,
                                     title: "Don't Forget \(manager.categories[index].name)!",
-                                    body: "בדוק אם סימנת את כל הפריטים שלך ב-\(manager.categories[index].name)",
+                                    body: "Check that you marked all your items in -\(manager.categories[index].name)",
                                     identifier: manager.categories[index].id.uuidString
                                 )
                             }
                         }
                 }
-
+                
+                // Add new item
                 HStack {
-                    TextField("הוסף פריט חדש", text: $newItem)
+                    TextField("Add New Item", text: $newItem)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                    Button("הוסף") {
+                    Button("Add") {
                         if !newItem.isEmpty {
                             manager.addItem(to: category, named: newItem)
                             newItem = ""
@@ -62,7 +67,8 @@ struct CategoryView: View {
                     }
                 }
                 .padding()
-
+                
+                // Leave‑home check button
                 Button(action: {
                     if let index = manager.categories.firstIndex(where: { $0.id == category.id }) {
                         let items = manager.categories[index].items
@@ -70,7 +76,7 @@ struct CategoryView: View {
                         showAlert = !uncheckedItems.isEmpty
                     }
                 }) {
-                    Text("יצאתי מהבית!")
+                    Text("I Left the House!")
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.red)
@@ -79,9 +85,9 @@ struct CategoryView: View {
                 }
                 .alert(isPresented: $showAlert) {
                     Alert(
-                        title: Text("שכחת משהו!"),
-                        message: Text("לא סימנת את:\n" + uncheckedItems.joined(separator: "\n")),
-                        dismissButton: .default(Text("בסדר"))
+                        title: Text("Forgot Something!"),
+                        message: Text("You didn't mark:\n" + uncheckedItems.joined(separator: "\n")),
+                        dismissButton: .default(Text("OK"))
                     )
                 }
             }

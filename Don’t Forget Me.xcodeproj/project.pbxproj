@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D681C8D62DF88EFE00A2D51C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D681C8D52DF88EF100A2D51C /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D6A079C52DB58FF100E0BDA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D6A079B72DB58FF000E0BDA2 /* Don’t Forget Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Don’t Forget Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6A079C42DB58FF100E0BDA2 /* Don’t Forget MeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Don’t Forget MeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6A079CE2DB58FF100E0BDA2 /* Don’t Forget MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Don’t Forget MeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6758AFF2DF8B04600DC0EE7 /* Don’t Forget Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Don’t Forget Me.app"; path = "/Users/leroyfainberg/Desktop/לירוי - תיכון/לירוי תכנות/Don’t Forget Me/build/Debug-iphoneos/Don’t Forget Me.app"; sourceTree = "<absolute>"; };
+		D6758B002DF8B04600DC0EE7 /* Don’t Forget MeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Don’t Forget MeTests.xctest"; path = "/Users/leroyfainberg/Desktop/לירוי - תיכון/לירוי תכנות/Don’t Forget Me/build/Debug-iphoneos/Don’t Forget Me.app/PlugIns/Don’t Forget MeTests.xctest"; sourceTree = "<absolute>"; };
+		D6758B012DF8B04600DC0EE7 /* Don’t Forget MeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Don’t Forget MeUITests.xctest"; path = "/Users/leroyfainberg/Desktop/לירוי - תיכון/לירוי תכנות/Don’t Forget Me/build/Debug-iphoneos/Don’t Forget MeUITests-Runner.app/PlugIns/Don’t Forget MeUITests.xctest"; sourceTree = "<absolute>"; };
+		D681C8D52DF88EF100A2D51C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -78,18 +83,8 @@
 				D6A079B92DB58FF000E0BDA2 /* Don’t Forget Me */,
 				D6A079C72DB58FF100E0BDA2 /* Don’t Forget MeTests */,
 				D6A079D12DB58FF100E0BDA2 /* Don’t Forget MeUITests */,
-				D6A079B82DB58FF000E0BDA2 /* Products */,
+				D681C8D52DF88EF100A2D51C /* README.md */,
 			);
-			sourceTree = "<group>";
-		};
-		D6A079B82DB58FF000E0BDA2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D6A079B72DB58FF000E0BDA2 /* Don’t Forget Me.app */,
-				D6A079C42DB58FF100E0BDA2 /* Don’t Forget MeTests.xctest */,
-				D6A079CE2DB58FF100E0BDA2 /* Don’t Forget MeUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,7 +109,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Don’t Forget Me";
-			productReference = D6A079B72DB58FF000E0BDA2 /* Don’t Forget Me.app */;
+			productReference = D6758AFF2DF8B04600DC0EE7 /* Don’t Forget Me.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D6A079C32DB58FF100E0BDA2 /* Don’t Forget MeTests */ = {
@@ -137,7 +132,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Don’t Forget MeTests";
-			productReference = D6A079C42DB58FF100E0BDA2 /* Don’t Forget MeTests.xctest */;
+			productReference = D6758B002DF8B04600DC0EE7 /* Don’t Forget MeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D6A079CD2DB58FF100E0BDA2 /* Don’t Forget MeUITests */ = {
@@ -160,7 +155,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Don’t Forget MeUITests";
-			productReference = D6A079CE2DB58FF100E0BDA2 /* Don’t Forget MeUITests.xctest */;
+			productReference = D6758B012DF8B04600DC0EE7 /* Don’t Forget MeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +191,7 @@
 			mainGroup = D6A079AE2DB58FF000E0BDA2;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = D6A079B82DB58FF000E0BDA2 /* Products */;
+			productRefGroup = D6A079AE2DB58FF000E0BDA2;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -212,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D681C8D62DF88EFE00A2D51C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
